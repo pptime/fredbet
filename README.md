@@ -182,3 +182,6 @@ You should have received a copy of the license along with this work. If not, see
 
 ## Travis Build Status
 [![Build Status](https://travis-ci.org/fred4jupiter/fredbet.svg?branch=master)](https://travis-ci.org/fred4jupiter/fredbet)
+
+## CSS
+https://getbootstrap.com/docs/3.3/customize
