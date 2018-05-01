@@ -7,6 +7,12 @@
 	</head>
 	<body>
 		<div layout:fragment="content" class="container">
+<!-- 		add a back office for the admin to input the jumbotron in a WYIWYG manner -->
+			<div class="jumbotron" id="adbanner">
+			    <h1>Bootstrap Tutorial</h1> 
+			    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
+			    responsive, mobile-first projects on the web.</p> 
+			</div>
 			<h1 th:text="#{login.title.short}"></h1>
 			<div th:if="${param.error}">
 				<div class="alert alert-danger" role="alert" th:text="#{login.msg.error}"></div>
@@ -31,6 +37,6 @@
 				</div>
 			</form>
 			<script type="text/javascript" th:src="@{/js/bootstrap-toggle.min.js}"></script>
-		</div>		
+		</div>
 	</body>
 </html>

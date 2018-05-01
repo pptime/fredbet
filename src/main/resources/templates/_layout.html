@@ -12,18 +12,42 @@
 		<link rel="stylesheet" th:href="@{/css/custom_bootstrap/theme.min.css}" />		
 		<link rel="stylesheet" th:href="@{/lightbox/css/lightbox.min.css}" />
 		<link rel="stylesheet" th:href="@{/css/custom.css}" />
+		<link rel="stylesheet" th:href="@{/css/sidebar.css}" />
 		<link rel="stylesheet" th:href="@{/css/print.css}" media="print"/>
 
-		<script type="text/javascript" th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
-				
-		<script type="text/javascript" th:src="@{/js/popper-1.11.0.min.js}"></script>		
+		<script type="text/javascript" th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>				
+		<script type="text/javascript" th:src="@{/js/popper-1.11.0.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/jquery.waypoints.min.js}"></script>		
+		<script type="text/javascript" th:src="@{/js/shortcuts/sticky.min.js}"></script>		
+		<script type="text/javascript" th:src="@{/js/moment-with-locales.js}"></script>		
+		<script type="text/javascript" th:src="@{/js/sidebar.js}"></script>		
 		<script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>		
 		<script type="text/javascript" th:src="@{/lightbox/js/lightbox.min.js}"></script>		
 	</head>
 	<body>
-		<nav th:include="_navigation :: menu" class="navbar navbar-inverse navbar-fixed-top"></nav>
-		<div class="container" role="main">		
-			<div layout:fragment="content" class="container" role="main">Content Placeholder</div>
+	<div class="wrapper">
+		<nav id="sidebar">
+			<div class="sidebar-header">
+				<h3>Bootstrap Sidebar</h3>
+			</div>
+
+		</nav>
+		<div id="content">
+			<nav th:include="_navigation :: menu"
+				class="navbar navbar-inverse navbar-fixed-top"></nav>
+			<div class="container" role="main">
+				<div layout:fragment="content" class="container" role="main">Content
+					Placeholder</div>
+			</div>
 		</div>
-	</body>
+	</div>
+	<script>
+		$(document).ready(function(){
+			setInterval(function(){
+				var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+				$('#adbanner').html("<h1>jumbotron changed by JS: " + currentTime + " </h1> <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p> ");
+			}, 5000);
+		});
+	</script>		
+</body>
 </html>

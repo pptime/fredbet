@@ -242,4 +242,10 @@ button.vote {
 	padding: 5px;
 }
 
-
+.content-container {
+	display: flex;
+	flex-direction: column;
+	max-width: 720px;
+	margin: auto;
+	position: relative;
+}
