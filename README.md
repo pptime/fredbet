@@ -189,3 +189,5 @@ https://www.bootstrap-live-customizer.com/
 https://bootstrapious.com/p/bootstrap-sidebar
 http://api.jquery.com/jquery.getjson/
 https://gist.github.com/jtsternberg/c272d7de5b967cec2d3d
+https://www.jabari-holder.com/blog/how-to-detect-2-elements-colliding-or-overlapping-in-jquery/
+if overlapped, hide the sidebar, for example?
